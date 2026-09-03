@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 Disallow: /404
 
-Sitemap: https://explore-sampa-joy.vercel.app/sitemap.xml
+Sitemap: https://www.viajandoporsp.com.br/sitemap.xml
 
 # Google
 User-agent: Googlebot

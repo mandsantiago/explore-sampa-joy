@@ -1,8 +1,8 @@
 import { Destination } from "@/lib/destinations";
 
-// TODO: depois de configurar o domínio final no Vercel, atualize esta constante
-// (também precisa atualizar em client/public/robots.txt e rodar generate-sitemap.mjs de novo)
-const SITE_URL = "https://explore-sampa-joy.vercel.app";
+// Domínio oficial do site. Se um dia trocar de domínio, atualize esta constante,
+// a mesma em DestinationSchema.tsx, o robots.txt, e rode o generate-sitemap.mjs de novo.
+const SITE_URL = "https://www.viajandoporsp.com.br";
 const SITE_NAME = "Viajando por SP";
 
 interface SEOProps {

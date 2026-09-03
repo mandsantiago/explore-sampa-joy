@@ -1,8 +1,7 @@
 import { Destination } from "@/lib/destinations";
 
-// TODO: mesmo domínio usado em SEO.tsx — atualize os dois juntos quando o
-// domínio final for configurado no Vercel.
-const SITE_URL = "https://explore-sampa-joy.vercel.app";
+// Mesmo domínio usado em SEO.tsx — atualize os dois juntos se o domínio mudar.
+const SITE_URL = "https://www.viajandoporsp.com.br";
 
 interface DestinationSchemaProps {
   destination: Destination;
