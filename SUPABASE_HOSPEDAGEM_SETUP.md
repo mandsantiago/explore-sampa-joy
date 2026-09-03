@@ -19,10 +19,13 @@ Guia passo a passo para deixar a seção "Onde Ficar" de cada destino editável 
 
 ## Passo 3: Pegar as chaves do projeto
 
-1. No menu lateral: **Settings** (ícone de engrenagem) → **API**
-2. Anote dois valores:
-   - **Project URL** (ex: `https://xxxxxxxxxxxxx.supabase.co`)
-   - **anon public** key (uma chave longa, começando com `eyJ...`)
+A Supabase reorganizou essa tela recentemente — os nomes podem aparecer diferentes dependendo de quando você criar o projeto:
+
+1. **Project URL**: no menu lateral, em **Project Settings** → **Data API** (dentro da seção "Integrations"). Copie o valor em **Project URL** (ex: `https://xxxxxxxxxxxxx.supabase.co`).
+2. **Chave pública**: no menu lateral, em **Project Settings** → **API Keys**. Você vai ver uma de duas telas:
+   - Se aparecer a aba **"Publishable and secret API keys"**: copie o valor de **Publishable key** (começa com `sb_publishable_...`) — é o que hoje substitui a antiga "anon key", funciona exatamente do mesmo jeito.
+   - Se aparecer a aba **"Legacy anon, service_role API keys"**: copie o valor de **anon public** (uma chave longa começando com `eyJ...`).
+   - Qualquer uma das duas serve para `SUPABASE_ANON_KEY` — não use a **Secret key** / **service_role** em nenhuma hipótese aqui, essa é só para uso interno do backend, nunca para o site público.
 
 ## Passo 4: Configurar as chaves na Vercel
 
