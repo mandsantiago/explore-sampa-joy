@@ -8,6 +8,8 @@ import { SEO } from "@/components/SEO";
 import { AlertCircle, MapPin } from "lucide-react";
 import { DestinationFAQ } from "@/components/DestinationFAQ";
 import { DestinationSchema } from "@/components/DestinationSchema";
+import { AccommodationSection } from "@/components/AccommodationSection";
+import { accommodationsByDestination } from "@/lib/accommodations.generated";
 import { Footer } from "@/components/Footer";
 import { ChevronRight } from "lucide-react";
 
@@ -97,25 +99,7 @@ export default function DestinationDetail() {
         </section>
 
         {/* Where to Stay */}
-        <section className="border-t border-gray-200 bg-gray-50 py-16">
-          <div className="container mx-auto px-4">
-            <h2 className="mb-6 text-3xl font-bold text-gray-900">Onde Ficar</h2>
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              <div className="bg-white rounded-lg p-6 border border-gray-200">
-                <h3 className="font-semibold text-gray-900 mb-2">Pousadas Charmosas</h3>
-                <p className="text-sm text-gray-600">Ambiente acolhedor, café colonial, ideal para casais.</p>
-              </div>
-              <div className="bg-white rounded-lg p-6 border border-gray-200">
-                <h3 className="font-semibold text-gray-900 mb-2">Hotéis Familiares</h3>
-                <p className="text-sm text-gray-600">Estrutura para crianças, piscina, atividades.</p>
-              </div>
-              <div className="bg-white rounded-lg p-6 border border-gray-200">
-                <h3 className="font-semibold text-gray-900 mb-2">Resorts</h3>
-                <p className="text-sm text-gray-600">Serviços completos, spa, gastronomia.</p>
-              </div>
-            </div>
-          </div>
-        </section>
+        <AccommodationSection accommodations={accommodationsByDestination[destination.id] ?? []} />
 
         {/* What to Do */}
         <section className="border-t border-gray-200 bg-white py-16">

@@ -72,6 +72,10 @@ SITE_URL=https://seu-dominio.com node generate-sitemap.mjs
 
 Veja [`GITHUB_VERCEL_DEPLOY.md`](./GITHUB_VERCEL_DEPLOY.md) para o passo a passo completo de publicação via GitHub + Vercel.
 
+## Hospedagens (seção "Onde Ficar")
+
+A seção "Onde Ficar" de cada destino busca dados de uma tabela no Supabase durante o build, o que permite editar os links de afiliado sem tocar em código. Veja [`SUPABASE_HOSPEDAGEM_SETUP.md`](./SUPABASE_HOSPEDAGEM_SETUP.md) para configurar.
+
 ## Licença
 
 MIT — veja [`LICENSE`](./LICENSE).

@@ -108,3 +108,11 @@ temp/
 # Webdev artifacts (checkpoint zips, migrations, etc.)
 .webdev/
 
+# Gerado automaticamente por fetch-accommodations.mjs a cada build — nunca
+# deve ser commitado, já que o conteúdo vem do Supabase e muda com frequência.
+client/src/lib/accommodations.generated.ts
+
+# Variáveis de ambiente locais (chaves do Supabase, etc.) — nunca commitar.
+.env
+.env.local
+

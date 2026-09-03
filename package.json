@@ -4,8 +4,8 @@
   "type": "module",
   "license": "MIT",
   "scripts": {
-    "dev": "vite --host",
-    "build": "vite build",
+    "dev": "node fetch-accommodations.mjs && vite --host",
+    "build": "node fetch-accommodations.mjs && vite build",
     "preview": "vite preview --host",
     "check": "tsc --noEmit",
     "format": "prettier --write .",
