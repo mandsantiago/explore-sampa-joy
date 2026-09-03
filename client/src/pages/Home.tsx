@@ -50,10 +50,10 @@ export default function Home() {
               50 destinos · Estado de São Paulo
             </p>
             <h1 className="mb-4 text-4xl md:text-5xl font-bold text-white leading-tight">
-              Lugares para viajar em <span className="text-yellow-400">São Paulo</span>
+              Para onde ir de carro pelo interior de <span className="text-yellow-400">São Paulo</span>
             </h1>
             <p className="text-lg text-gray-200">
-              Praias, serras, cachoeiras, cidades históricas e vinícolas — dicas de destinos em SP tudo a poucas horas da capital.
+              Praias, serras, cachoeiras, cidades históricas e vinícolas a poucas horas de estrada da capital — com distância, tempo de viagem e dicas de roteiro para cada destino.
             </p>
           </div>
         </div>
@@ -80,9 +80,9 @@ export default function Home() {
 
         {/* Destinations Grid */}
         <div className="mb-12">
-          <h2 className="mb-2 text-3xl font-bold text-gray-900">Lugares para viajar em SP em alta</h2>
+          <h2 className="mb-2 text-3xl font-bold text-gray-900">Destinos para viajar de carro em São Paulo</h2>
           <p className="mb-8 text-gray-600">
-            {filteredDestinations.length} destinos em São Paulo para se apaixonar.
+            {filteredDestinations.length} destinos para você se apaixonar, com distância e tempo de estrada a partir da capital.
           </p>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">

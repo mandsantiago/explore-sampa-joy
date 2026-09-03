@@ -8,17 +8,21 @@ import { Toaster } from "@/components/ui/sonner";
 import DestinationDetail from "./pages/DestinationDetail";
 import { SEO } from "./components/SEO";
 import { ScrollToTopButton } from "./components/ScrollToTopButton";
+import { ScrollToTop } from "./components/ScrollToTop";
 
 
 function Router() {
   return (
-    <Switch>
-      <Route path={"/"} component={Home} />
-      <Route path={"/destino/:id"} component={DestinationDetail} />
-      <Route path={"/404"} component={NotFound} />
-      {/* Final fallback route */}
-      <Route component={NotFound} />
-    </Switch>
+    <>
+      <ScrollToTop />
+      <Switch>
+        <Route path={"/"} component={Home} />
+        <Route path={"/destino/:id"} component={DestinationDetail} />
+        <Route path={"/404"} component={NotFound} />
+        {/* Final fallback route */}
+        <Route component={NotFound} />
+      </Switch>
+    </>
   );
 }
 

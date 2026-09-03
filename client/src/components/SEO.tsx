@@ -3,6 +3,7 @@ import { Destination } from "@/lib/destinations";
 // TODO: depois de configurar o domínio final no Vercel, atualize esta constante
 // (também precisa atualizar em client/public/robots.txt e rodar generate-sitemap.mjs de novo)
 const SITE_URL = "https://explore-sampa-joy.vercel.app";
+const SITE_NAME = "Viajando por SP";
 
 interface SEOProps {
   destination?: Destination;
@@ -12,16 +13,18 @@ interface SEOProps {
 }
 
 export function SEO({ destination, title, description, image }: SEOProps) {
+  // Padrão "Marca - Assunto", igual aparece na aba do navegador: cada cidade
+  // vira "Viajando por SP - Botucatu", "Viajando por SP - Atibaia" etc.
   const pageTitle = destination
-    ? `${destination.name} - Dicas de Turismo em SP`
-    : title || "Explore Sampa Joy - 50 Destinos em São Paulo";
+    ? `${SITE_NAME} - ${destination.name}`
+    : title || `${SITE_NAME} - 50 Destinos para Viajar de Carro em São Paulo`;
 
   // Usamos shortDescription (curta e já revisada) para as meta tags, em vez de
   // fullDescription: mecanismos de busca e redes sociais truncam por volta de
   // 155-160 caracteres, então uma descrição longa só fica cortada no meio da frase.
   const pageDescription = destination
     ? destination.shortDescription
-    : description || "Descubra 50 destinos incríveis em São Paulo: praias, serras, cachoeiras, cidades históricas e vinícolas a poucas horas da capital.";
+    : description || "Descubra 50 destinos para viajar de carro pelo estado de São Paulo: praias, serras, cachoeiras, cidades históricas e vinícolas a poucas horas da capital, com dicas de roteiro, distância e tempo de estrada.";
 
   // Open Graph e Twitter Card exigem URL absoluta de imagem — um caminho relativo
   // como "/images/foo.jpg" não é resolvido pelos crawlers do WhatsApp/Twitter/Facebook.
@@ -38,8 +41,8 @@ export function SEO({ destination, title, description, image }: SEOProps) {
     : {
         "@context": "https://schema.org",
         "@type": "WebSite",
-        name: "Explore Sampa Joy",
-        description: "Descubra 50 destinos incríveis em São Paulo",
+        name: SITE_NAME,
+        description: "Guia de destinos para viajar de carro pelo estado de São Paulo",
         url: SITE_URL,
         potentialAction: {
           "@type": "SearchAction",
@@ -64,6 +67,8 @@ export function SEO({ destination, title, description, image }: SEOProps) {
       <meta property="og:image" content={pageImage} />
       <meta property="og:type" content={destination ? "article" : "website"} />
       <meta property="og:url" content={destination ? `${SITE_URL}/destino/${destination.id}` : SITE_URL} />
+      <meta property="og:site_name" content={SITE_NAME} />
+      <meta property="og:locale" content="pt_BR" />
 
       {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />
@@ -72,8 +77,8 @@ export function SEO({ destination, title, description, image }: SEOProps) {
       <meta name="twitter:image" content={pageImage} />
 
       {/* Additional SEO */}
-      <meta name="keywords" content={destination ? `${destination.name}, turismo SP, viagem, ${destination.categories.join(", ")}` : "turismo São Paulo, destinos SP, viagem, praias, serras"} />
-      <meta name="author" content="Explore Sampa Joy" />
+      <meta name="keywords" content={destination ? `${destination.name}, viagem de carro, roteiro SP, turismo SP, ${destination.categories.join(", ")}` : "viagem de carro SP, roteiro de carro São Paulo, destinos perto de São Paulo, bate e volta SP, turismo São Paulo"} />
+      <meta name="author" content={SITE_NAME} />
       <meta name="robots" content="index, follow" />
       <meta name="language" content="Portuguese" />
 

@@ -1,5 +1,5 @@
-import { Star, MapPin } from "lucide-react";
-  import { Destination, categoryColors } from "@/lib/destinations";
+import { Star, MapPin, Car } from "lucide-react";
+  import { Destination, categoryColors, formatDrivingTime } from "@/lib/destinations";
   import { getImageDimensions } from "@/lib/imageDimensions";
   import { Button } from "@/components/ui/button";
   import { useLocation } from "wouter";
@@ -44,9 +44,15 @@ import { Star, MapPin } from "lucide-react";
             </div>
           </div>
           <div className="p-4">
-            <div className="mb-2 flex items-center gap-2 text-sm text-gray-600">
-              <MapPin className="h-4 w-4" />
-              <span>{destination.distance} km</span>
+            <div className="mb-2 flex items-center gap-3 text-sm text-gray-600">
+              <span className="flex items-center gap-1">
+                <MapPin className="h-4 w-4" />
+                {destination.distance} km
+              </span>
+              <span className="flex items-center gap-1">
+                <Car className="h-4 w-4" />
+                {formatDrivingTime(destination.drivingHours)}
+              </span>
             </div>
             <h3 className="mb-2 text-lg font-bold text-gray-900">
               {destination.name}

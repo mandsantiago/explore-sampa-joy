@@ -1,6 +1,6 @@
 # 🚀 Publicar no GitHub + Vercel
 
-Guia passo a passo para publicar o **Explore Sampa Joy** no GitHub e Vercel.
+Guia passo a passo para publicar o **Viajando por SP** no GitHub e Vercel.
 
 Este é um site 100% estático (React + Vite, sem backend). O build gera arquivos HTML/CSS/JS em `dist/public`, e o `vercel.json` já está configurado com o comando de build, a pasta de saída correta e o redirecionamento necessário para as rotas internas (`/destino/:id`) funcionarem ao acessar/recarregar a página diretamente.
 
@@ -18,7 +18,7 @@ cd explore-sampa-joy
 # Se ainda não for um repositório git
 git init
 git add .
-git commit -m "Initial commit: Explore Sampa Joy"
+git commit -m "Initial commit: Viajando por SP"
 
 # Crie o repositório em https://github.com/new (não inicialize com README/gitignore/license,
 # já existem localmente) e depois:

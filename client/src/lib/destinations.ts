@@ -104,7 +104,25 @@ export const destinations: Destination[] = [
           description: "Vale reservar uma manhã para queijos frescos e doces caseiros"
         }
       ]
-    }
+    },
+    faqs: [
+      {
+        question: "Qual é a diferença entre Águas de Lindóia e Lindóia?",
+        answer: "São cidades vizinhas do Circuito das Águas Paulista: Águas de Lindóia é o destino mais turístico e hoteleiro da dupla, com o Balneário Municipal e o teleférico até o Morro do Cruzeiro; Lindóia é menor e mais tranquila."
+      },
+      {
+        question: "Qual é a melhor época para visitar Águas de Lindóia?",
+        answer: "Outono e inverno são os mais procurados, quando o clima fica mais seco e agradável para caminhar pela cidade e aproveitar as fontes de água mineral."
+      },
+      {
+        question: "Quantos dias são necessários para conhecer Águas de Lindóia?",
+        answer: "Um fim de semana (2 dias) é suficiente para o Balneário Municipal, o teleférico e a Praça Adhemar de Barros com calma."
+      },
+      {
+        question: "Como chegar em Águas de Lindóia saindo de São Paulo?",
+        answer: "O trajeto é pela Rodovia Fernão Dias ou Dom Pedro I, cerca de 175 km e 2h10 de viagem — no mesmo circuito de Serra Negra e Lindóia."
+      }
+    ]
   },
   {
     id: "aguas-de-sao-pedro",
@@ -178,7 +196,25 @@ export const destinations: Destination[] = [
           description: "Café aconchegante, famoso pelos cannolis."
         }
       ]
-    }
+    },
+    faqs: [
+      {
+        question: "Por que Águas de São Pedro é conhecida como a menor cidade do Brasil?",
+        answer: "O município tem pouco mais de 2 km² de área, o que o torna o menor do país em extensão territorial — mesmo assim, concentra um dos parques de águas termais mais tradicionais do interior paulista."
+      },
+      {
+        question: "Qual é a melhor época para visitar Águas de São Pedro?",
+        answer: "A cidade pode ser visitada o ano todo, já que o Balneário Municipal tem águas quentes naturais. A primavera costuma deixar o Parque Dr. Octávio Moura Andrade ainda mais bonito."
+      },
+      {
+        question: "Quantos dias são necessários para conhecer Águas de São Pedro?",
+        answer: "Um dia é suficiente para o Balneário Municipal e uma caminhada pela Avenida Carlos Mauro. Quem quer aproveitar com mais calma pode reservar um fim de semana."
+      },
+      {
+        question: "Como chegar em Águas de São Pedro saindo de São Paulo?",
+        answer: "O trajeto é pela Rodovia Anhanguera até Piracicaba, seguindo por estrada estadual — cerca de 190 km e 2h20 de viagem."
+      }
+    ]
   },
   {
     id: "atibaia",
@@ -248,7 +284,25 @@ export const destinations: Destination[] = [
           description: "Para quem busca algo diferente do circuito regional, com pratos da culinária portuguesa."
         }
       ]
-    }
+    },
+    faqs: [
+      {
+        question: "Vale a pena visitar Atibaia em um bate-volta?",
+        answer: "Sim — por ficar a menos de 1 hora de São Paulo, Atibaia é um dos destinos de bate-volta mais fáceis da região, com trilhas, mirantes e fazendas de morango que dá para conhecer em um único dia."
+      },
+      {
+        question: "Qual é a melhor época para visitar Atibaia?",
+        answer: "Agosto e setembro são os meses da tradicional Festa das Flores e do Morango. Fora dessa época, a primavera favorece as flores e o outono traz um clima mais ameno para trilhas."
+      },
+      {
+        question: "Atibaia é boa para a prática de voo livre?",
+        answer: "Sim — a Pedra Grande e o Alto da Serra do Itapetinga são pontos de decolagem conhecidos entre praticantes de parapente e asa-delta, com voos duplos disponíveis para iniciantes."
+      },
+      {
+        question: "Como chegar em Atibaia saindo de São Paulo?",
+        answer: "O trajeto é pela Rodovia Fernão Dias ou Dom Pedro I, cerca de 65 km e menos de 1 hora de viagem — um dos destinos de serra mais próximos da capital."
+      }
+    ]
   },
   {
     id: "boituva",
@@ -326,7 +380,25 @@ export const destinations: Destination[] = [
           description: "Combina hospedagem com gastronomia caipira, ótimo para famílias que já estão fazendo um passeio de aventura na região."
         }
       ]
-    }
+    },
+    faqs: [
+      {
+        question: "Preciso ter experiência para voar de balão ou saltar de paraquedas em Boituva?",
+        answer: "Não — tanto os voos de balão quanto os saltos de paraquedas duplo (com instrutor) são feitos para iniciantes, sem experiência prévia necessária. As operadoras fornecem todo o equipamento e treinamento básico."
+      },
+      {
+        question: "Por que Boituva é conhecida como a capital do paraquedismo?",
+        answer: "A cidade abriga uma das maiores pistas de queda livre da América Latina e recebe praticantes de paraquedismo e voo de balão de todo o Brasil, incluindo o tradicional festival de balonismo em julho."
+      },
+      {
+        question: "Quantas horas são necessárias para conhecer Boituva?",
+        answer: "Um dia é suficiente para um voo de balão ou salto de paraquedas e uma visita ao Museu do Balonismo — muitos visitantes fazem o passeio em um bate-volta a partir de São Paulo."
+      },
+      {
+        question: "Como chegar em Boituva saindo de São Paulo?",
+        answer: "O trajeto é pela Rodovia Castelo Branco, cerca de 115 km e 1h25 de viagem."
+      }
+    ]
   },
   {
     id: "botucatu",
@@ -392,7 +464,25 @@ export const destinations: Destination[] = [
           description: "Reduto com concentração de restaurantes, indicado por quem já mora ou visita a cidade com frequência."
         }
       ]
-    }
+    },
+    faqs: [
+      {
+        question: "Qual é a melhor época para visitar Botucatu?",
+        answer: "Entre abril e setembro o clima fica mais seco e ameno, ideal para trilhas e para visitar as cachoeiras e mirantes da região com mais conforto."
+      },
+      {
+        question: "Botucatu é uma boa opção para quem gosta de trilhas e natureza?",
+        answer: "Sim — a cidade fica em uma região de relevo elevado, com o Morro do Peru, cachoeiras no Rio Pardo e diversos mirantes que rendem boas trilhas de dificuldade variada."
+      },
+      {
+        question: "Quantos dias são necessários para conhecer Botucatu?",
+        answer: "Um fim de semana (2 dias) permite conhecer bem o Morro do Peru, uma cachoeira e os principais mirantes da cidade."
+      },
+      {
+        question: "Como chegar em Botucatu saindo de São Paulo?",
+        answer: "O trajeto é pela Rodovia Castelo Branco e depois a Marechal Rondon, cerca de 235 km e quase 3 horas de viagem."
+      }
+    ]
   },
   {
     id: "brotas",
@@ -462,7 +552,25 @@ export const destinations: Destination[] = [
           description: "No centrinho da cidade há empórios com produtos locais, como cachaças artesanais, compotas e doces caseiros — boas opções para lanches e para levar de lembrança."
         }
       ]
-    }
+    },
+    faqs: [
+      {
+        question: "Preciso ter experiência para fazer rafting em Brotas?",
+        answer: "Não — Brotas é considerada a capital nacional do turismo de aventura, e as operadoras locais oferecem pacotes de rafting, boia-cross e cascading para iniciantes, com todo o equipamento de segurança."
+      },
+      {
+        question: "Qual é a melhor época para visitar Brotas?",
+        answer: "O verão (dezembro a março) é a época mais procurada, quando os rios têm mais volume de água, ideal para rafting e boia-cross. Fora dessa época as atividades de aventura em terra, como arvorismo e cachoeiras, seguem disponíveis."
+      },
+      {
+        question: "Quantos dias são necessários para conhecer Brotas?",
+        answer: "Um fim de semana (2 dias) é suficiente para combinar uma atividade de aventura no rio, como rafting, com uma cachoeira ou o Ecoparque Cassorova."
+      },
+      {
+        question: "Como chegar em Brotas saindo de São Paulo?",
+        answer: "O trajeto é pela Rodovia Castelo Branco ou Anhanguera até a região de Itirapina, cerca de 250 km e 3 horas de viagem."
+      }
+    ]
   },
   {
     id: "campos-do-jordao",
@@ -3850,3 +3958,17 @@ export const categoryColorsBorder: Record<Category, string> = {
   "Vinho & Lazer": "border-violet-500",
   "Bate e Volta": "border-gray-500",
 };
+
+/**
+ * Converte o campo `drivingHours` (número decimal, ex: 2.2) em um texto
+ * amigável de tempo de estrada (ex: "2h10"), já que o público do site viaja
+ * de carro e esse dado é tão ou mais relevante que a distância em km.
+ */
+export function formatDrivingTime(hours: number): string {
+  const totalMinutes = Math.round(hours * 60);
+  const h = Math.floor(totalMinutes / 60);
+  const m = totalMinutes % 60;
+  if (h === 0) return `${m}min`;
+  if (m === 0) return `${h}h`;
+  return `${h}h${m.toString().padStart(2, "0")}`;
+}

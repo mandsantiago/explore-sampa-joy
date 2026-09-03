@@ -58,11 +58,7 @@ export default function DestinationDetail() {
 
   return (
     <div className="min-h-screen bg-white flex flex-col">
-      <SEO 
-        title={destination.name}
-        description={destination.shortDescription}
-        image={destination.imageUrl}
-      />
+      <SEO destination={destination} />
       <DestinationSchema destination={destination} />
       <Header />
       

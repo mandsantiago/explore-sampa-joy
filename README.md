@@ -1,4 +1,4 @@
-# Explore Sampa Joy
+# Viajando por SP
 
 Guia interativo com 50 destinos turísticos perto de São Paulo — praias, serras, cachoeiras, cidades históricas e vinícolas — com busca, filtros por categoria/distância e uma página de detalhes para cada destino.
 
