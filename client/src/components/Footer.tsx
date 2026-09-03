@@ -51,6 +51,40 @@ export function Footer() {
               </a>{" "}
               desde 2015
             </p>
+
+            <h4 className="font-semibold text-white mt-6 mb-3">Na mídia</h4>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <a
+                  href="https://exame.com/invest/minhas-financas/quanto-custa-viajar-para-a-copa-do-mundo-2018-na-russia/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-cyan-300 transition-colors"
+                >
+                  Exame — Quanto custa viajar para a Copa do Mundo de 2018 na Rússia
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://oglobo.globo.com/economia/noticia/2024/12/30/com-dolar-e-euro-nas-alturas-veja-destinos-de-viagem-com-cambio-mais-favoravel.ghtml"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-cyan-300 transition-colors"
+                >
+                  O Globo — Com dólar e euro nas alturas, veja destinos de viagem com câmbio mais favorável
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://infograficos.estadao.com.br/focas/planeje-sua-vida/como-economizar-para-realizar-o-seu-sonho-de-viagem"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-cyan-300 transition-colors"
+                >
+                  Estadão — Como economizar para realizar o seu sonho de viagem
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
 
