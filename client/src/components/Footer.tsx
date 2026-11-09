@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { categories } from "@/lib/destinations";
+import { categoryPages } from "@/lib/categories";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -12,7 +12,7 @@ export function Footer() {
           {/* Column 1: Logo and Description */}
           <div>
             <div className="mb-4">
-              <h3 className="text-xl font-bold text-white">Viajando por SP</h3>
+              <p className="text-xl font-bold text-white">Viajando por SP</p>
               <p className="text-sm text-gray-400 mt-2">
                 Guia prático de lugares para viajar no estado de São Paulo.
               </p>
@@ -21,14 +21,12 @@ export function Footer() {
 
           {/* Column 2: Categories */}
           <div>
-            <h4 className="font-semibold text-white mb-4">Categorias</h4>
+            <p className="font-semibold text-white mb-4">Categorias</p>
             <ul className="space-y-2">
-              {categories.map((category) => (
-                <li key={category}>
-                  <Link href={`/?category=${encodeURIComponent(category)}`}>
-                    <a className="text-sm text-gray-400 hover:text-white transition-colors">
-                      {category}
-                    </a>
+              {categoryPages.map((c) => (
+                <li key={c.slug}>
+                  <Link href={`/categoria/${c.slug}`} className="text-sm text-gray-400 hover:text-white transition-colors">
+                    {c.name}
                   </Link>
                 </li>
               ))}
@@ -37,10 +35,12 @@ export function Footer() {
 
           {/* Column 3: About */}
           <div>
-            <h4 className="font-semibold text-white mb-4">Sobre</h4>
+            <p className="font-semibold text-white mb-4">Sobre</p>
             <p className="text-sm text-gray-400 leading-relaxed">
               Feito por{" "}
-              <span className="text-white font-medium">Amanda Santiago</span> - faço e{" "}
+              <Link href="/sobre" className="text-white font-medium hover:text-cyan-300 transition-colors">
+                Amanda Santiago
+              </Link> - faço e{" "}
               <a
                 href="https://www1.folha.uol.com.br/turismo/2018/09/juri-elege-50-destinos-campeoes-no-brasil-e-no-mundo.shtml"
                 target="_blank"
@@ -49,10 +49,13 @@ export function Footer() {
               >
                 escrevo sobre viagens
               </a>{" "}
-              desde 2015
+              desde 2015.{" "}
+              <Link href="/sobre" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                Conheça o projeto
+              </Link>
             </p>
 
-            <h4 className="font-semibold text-white mt-6 mb-3">Na mídia</h4>
+            <p className="font-semibold text-white mt-6 mb-3">Na mídia</p>
             <ul className="space-y-2 text-sm">
               <li>
                 <a

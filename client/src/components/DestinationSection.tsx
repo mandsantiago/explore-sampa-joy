@@ -1,6 +1,9 @@
-import { Destination, categoryColors } from "@/lib/destinations";
+import { Link } from "wouter";
+import { Destination, categoryColors, formatDrivingTime } from "@/lib/destinations";
+import { getExtras } from "@/lib/destinationExtras";
+import { categoryPath } from "@/lib/categories";
 import { getImageDimensions } from "@/lib/imageDimensions";
-import { MapPin, Star, Clock, Zap } from "lucide-react";
+import { MapPin, Clock, Zap, Heart } from "lucide-react";
 
 interface DestinationSectionProps {
   destination: Destination;
@@ -20,7 +23,7 @@ export function DestinationSection({ destination }: DestinationSectionProps) {
           <div className="flex items-center">
             <img
               src={destination.imageUrl}
-              alt={destination.name}
+              alt={getExtras(destination.id).imageAlt}
               width={width}
               height={height}
               loading="eager"
@@ -36,17 +39,18 @@ export function DestinationSection({ destination }: DestinationSectionProps) {
             <div className="space-y-4">
               <div className="flex flex-wrap items-center gap-2">
                 {destination.categories.map((category) => (
-                  <span
+                  <Link
                     key={category}
-                    className={`rounded-full px-3 py-1 text-xs font-semibold text-white ${categoryColors[category]}`}
+                    href={categoryPath(category)}
+                    className={`rounded-full px-3 py-1 text-xs font-semibold text-white hover:opacity-90 ${categoryColors[category]}`}
                   >
                     {category}
-                  </span>
+                  </Link>
                 ))}
               </div>
-              <h2 className="text-4xl font-bold text-gray-900">
+              <h1 className="text-4xl font-bold text-gray-900">
                 {destination.name}
-              </h2>
+              </h1>
               
               {/* Info Boxes */}
               <div className="grid grid-cols-3 gap-3">
@@ -68,18 +72,18 @@ export function DestinationSection({ destination }: DestinationSectionProps) {
                     De Carro
                   </div>
                   <p className="mt-2 text-lg font-bold text-gray-900">
-                    {destination.drivingHours}h
+                    {formatDrivingTime(destination.drivingHours)}
                   </p>
                 </div>
                 
-                {/* Rating Box */}
-                <div className="rounded-lg border border-gray-200 bg-gradient-to-br from-yellow-50 to-yellow-100 p-4">
+                {/* Ideal para (substitui a antiga nota "Ranking", que parecia avaliação de usuários) */}
+                <div className="rounded-lg border border-gray-200 bg-gradient-to-br from-pink-50 to-pink-100 p-4">
                   <div className="flex items-center gap-2 text-xs font-semibold text-gray-600 uppercase tracking-wide">
-                    <Star className="h-4 w-4 fill-yellow-500 text-yellow-500" />
-                    Ranking
+                    <Heart className="h-4 w-4 text-pink-600" aria-hidden="true" />
+                    Ideal para
                   </div>
-                  <p className="mt-2 text-lg font-bold text-gray-900">
-                    {destination.rating.toFixed(1)}/5.0
+                  <p className="mt-2 text-sm font-bold leading-snug text-gray-900">
+                    {destination.categories.join(", ")}
                   </p>
                 </div>
               </div>
@@ -92,10 +96,10 @@ export function DestinationSection({ destination }: DestinationSectionProps) {
 
             {/* Top Attractions Box */}
             <div className="rounded-lg border border-gray-200 bg-gradient-to-br from-cyan-50 to-cyan-100 p-6">
-              <h3 className="mb-4 flex items-center gap-2 text-lg font-bold text-gray-900 uppercase tracking-wide">
+              <h2 className="mb-4 flex items-center gap-2 text-lg font-bold text-gray-900 uppercase tracking-wide">
                 <Zap className="h-5 w-5 text-cyan-600" />
-                Top Atrações
-              </h3>
+                Principais atrações
+              </h2>
               <ul className="space-y-2">
                 {destination.topAttractions.map((attraction, index) => (
                   <li key={index} className="flex items-start gap-3 text-gray-700">
@@ -108,9 +112,9 @@ export function DestinationSection({ destination }: DestinationSectionProps) {
 
             {/* Best Season Box */}
             <div className="rounded-lg border border-gray-200 bg-gradient-to-br from-green-50 to-green-100 p-6">
-              <h3 className="mb-3 text-lg font-bold text-gray-900 uppercase tracking-wide">
-                Melhor Época
-              </h3>
+              <h2 className="mb-3 text-lg font-bold text-gray-900 uppercase tracking-wide">
+                Melhor época
+              </h2>
               <p className="text-gray-700">{destination.bestSeason}</p>
             </div>
           </div>

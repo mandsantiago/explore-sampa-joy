@@ -15,6 +15,8 @@ export function ScrollToTop() {
   const [location] = useLocation();
 
   useEffect(() => {
+    // Links com âncora (ex.: /#categorias) devem rolar até a seção, não ao topo.
+    if (window.location.hash) return;
     window.scrollTo(0, 0);
   }, [location]);
 

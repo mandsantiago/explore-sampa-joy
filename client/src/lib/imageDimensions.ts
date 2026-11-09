@@ -39,7 +39,7 @@ export const imageDimensions: Record<string, { width: number; height: number }> 
   "mogi_das_cruzes_2cf7fe70.jpg": { width: 960, height: 640 },
   "nazare_paulista_d12ffa49.jpg": { width: 960, height: 539 },
   "olimpia_7edcc1fd.jpg": { width: 960, height: 720 },
-  "parque_estadudal_da_cantareira_dd452ea4.jpg": { width: 960, height: 640 },
+  "parque_cantareira_cachoeira.jpg": { width: 1000, height: 667 },
   "pedra_bela_f9c341a0.jpg": { width: 960, height: 387 },
   "pedreira_d58345fb.jpg": { width: 960, height: 537 },
   "piracicaba_5571b1a7.jpg": { width: 960, height: 625 },

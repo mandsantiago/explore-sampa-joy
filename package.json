@@ -5,11 +5,10 @@
   "license": "MIT",
   "scripts": {
     "dev": "node fetch-accommodations.mjs && vite --host",
-    "build": "node fetch-accommodations.mjs && vite build",
+    "build": "node fetch-accommodations.mjs && vite build && vite build --ssr src/entry-server.tsx --outDir ../dist/server && node prerender.mjs",
     "preview": "vite preview --host",
     "check": "tsc --noEmit",
-    "format": "prettier --write .",
-    "sitemap": "node generate-sitemap.mjs"
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",

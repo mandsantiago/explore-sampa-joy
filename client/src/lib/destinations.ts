@@ -1032,7 +1032,7 @@ export const destinations: Destination[] = [
       },
       {
         question: "Como chegar em Olímpia saindo de São Paulo?",
-        answer: "O trajeto é mais longo que a maioria dos destinos próximos à capital: cerca de 445 km pela Rodovia Anhanguera/Washington Luís, entre 5h30 e 6h de viagem de carro."
+        answer: "O trajeto é mais longo que a maioria dos destinos próximos à capital: cerca de 450 km pela Rodovia dos Bandeirantes e pela Washington Luís até Catiguá, entre 5h e 5h30 de viagem de carro."
       }
     ]
   },
@@ -2788,8 +2788,8 @@ export const destinations: Destination[] = [
     id: "iporanga",
     name: "Iporanga",
     categories: ["Natureza & Aventura"],
-    distance: 220,
-    drivingHours: 2.8,
+    distance: 340,
+    drivingHours: 5,
     rating: 4.7,
     shortDescription: "PETAR - Cavernas, espeleologia e aventura subterrânea.",
     fullDescription: "Iporanga é a porta de entrada do PETAR (Parque Estadual Turístico do Alto Ribeira), famoso por suas cavernas e oportunidades de espeleologia. A região oferece trilhas, rapel em cavernas e contato com formações geológicas impressionantes.",
@@ -2856,7 +2856,7 @@ export const destinations: Destination[] = [
       },
       {
         question: "Como chegar em Iporanga saindo de São Paulo?",
-        answer: "O trajeto é pela Rodovia Régis Bittencourt até a região de Apiaí/Iporanga — cerca de 220 km e quase 3 horas de viagem."
+        answer: "O trajeto mais usado é pela Rodovia Régis Bittencourt (BR-116) até Jacupiranga, seguindo pela SP-193 e pela SP-165 até Iporanga — cerca de 340 km e 5 horas de viagem."
       }
     ]
   },
@@ -3092,8 +3092,8 @@ export const destinations: Destination[] = [
     id: "porto-ferreira",
     name: "Porto Ferreira",
     categories: ["Bate e Volta"],
-    distance: 150,
-    drivingHours: 1.9,
+    distance: 240,
+    drivingHours: 2.8,
     rating: 4.3,
     shortDescription: "Capital da cerâmica e decoração com lojas de fábrica.",
     fullDescription: "Porto Ferreira é a capital da cerâmica e decoração de São Paulo, com lojas de fábrica oferecendo produtos de qualidade. Ideal para quem busca compras e contato com a tradição cerâmica.",
@@ -3160,7 +3160,7 @@ export const destinations: Destination[] = [
       },
       {
         question: "Como chegar em Porto Ferreira saindo de São Paulo?",
-        answer: "O trajeto é pela Rodovia Anhanguera, cerca de 150 km e quase 2 horas de viagem."
+        answer: "O trajeto é pelas rodovias dos Bandeirantes e Anhanguera, cerca de 240 km e quase 3 horas de viagem."
       }
     ]
   },
@@ -3396,8 +3396,8 @@ export const destinations: Destination[] = [
     id: "bananal",
     name: "Bananal",
     categories: ["Destinos Românticos", "História"],
-    distance: 200,
-    drivingHours: 2.5,
+    distance: 340,
+    drivingHours: 4.5,
     rating: 4.6,
     shortDescription: "Fazendas do café do século XIX na Serra da Bocaina.",
     fullDescription: "Bananal é uma cidade histórica com fazendas de café do século XIX preservadas. A região oferece tours em fazendas, gastronomia rural e contato com a história do café.",
@@ -3464,7 +3464,7 @@ export const destinations: Destination[] = [
       },
       {
         question: "Como chegar em Bananal saindo de São Paulo?",
-        answer: "O trajeto é pela Rodovia Presidente Dutra até a região de Queluz, seguindo pela Rodovia dos Tropeiros (SP-068) — cerca de 200-240 km e mais de 3 horas de viagem."
+        answer: "O caminho mais rápido é pela Ayrton Senna, Carvalho Pinto e Via Dutra até Barra Mansa (RJ), seguindo pela SP-064 até Bananal — cerca de 340 km e 4h30 de viagem."
       }
     ]
   },
@@ -3629,7 +3629,7 @@ export const destinations: Destination[] = [
     rating: 4.5,
     shortDescription: "Ecoturismo colado na capital com trilhas e natureza preservada.",
     fullDescription: "O Parque Estadual da Cantareira é um bate-e-volta perfeito com trilhas bem marcadas, natureza preservada e vistas panorâmicas. Ideal para quem busca ecoturismo a poucos quilômetros de São Paulo.",
-    imageUrl: "/images/parque_estadudal_da_cantareira_dd452ea4.jpg",
+    imageUrl: "/images/parque_cantareira_cachoeira.jpg",
     topAttractions: ["Trilhas", "Natureza", "Vistas panorâmicas", "Ecoturismo", "Bate-e-volta"],
     bestSeason: "Primavera e outono para trilhas.",
     latitude: -23.3667,

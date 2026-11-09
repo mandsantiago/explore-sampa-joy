@@ -1,5 +1,4 @@
 import { ChevronDown } from "lucide-react";
-import { useState } from "react";
 
 interface FAQItem {
   question: string;
@@ -11,40 +10,34 @@ interface DestinationFAQProps {
   faqs: FAQItem[];
 }
 
+// Usa <details>/<summary>: as respostas ficam no HTML (visíveis para o Google
+// e para leitores de tela) mesmo com o item fechado.
 export function DestinationFAQ({ destinationName, faqs }: DestinationFAQProps) {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
+  if (!faqs.length) return null;
   return (
     <section className="border-t border-gray-200 bg-white py-16">
       <div className="container mx-auto px-4">
         <h2 className="mb-8 text-3xl font-bold text-gray-900">
-          Perguntas Frequentes sobre {destinationName}
+          Perguntas frequentes sobre {destinationName}
         </h2>
 
-        <div className="space-y-4 max-w-3xl">
+        <div className="max-w-3xl space-y-4">
           {faqs.map((faq, idx) => (
-            <div
+            <details
               key={idx}
-              className="border border-gray-200 rounded-lg overflow-hidden hover:border-gray-300 transition-colors"
+              className="group overflow-hidden rounded-lg border border-gray-200 transition-colors hover:border-gray-300"
             >
-              <button
-                onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
-                className="w-full flex items-center justify-between px-6 py-4 bg-gray-50 hover:bg-gray-100 transition-colors text-left"
-              >
+              <summary className="flex cursor-pointer list-none items-center justify-between bg-gray-50 px-6 py-4 text-left transition-colors hover:bg-gray-100 [&::-webkit-details-marker]:hidden">
                 <h3 className="text-sm font-semibold text-gray-900">{faq.question}</h3>
                 <ChevronDown
-                  className={`h-5 w-5 text-gray-600 transition-transform ${
-                    openIndex === idx ? "rotate-180" : ""
-                  }`}
+                  className="h-5 w-5 flex-shrink-0 text-gray-600 transition-transform group-open:rotate-180"
+                  aria-hidden="true"
                 />
-              </button>
-
-              {openIndex === idx && (
-                <div className="px-6 py-4 bg-white border-t border-gray-200">
-                  <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
-                </div>
-              )}
-            </div>
+              </summary>
+              <div className="border-t border-gray-200 bg-white px-6 py-4">
+                <p className="leading-relaxed text-gray-700">{faq.answer}</p>
+              </div>
+            </details>
           ))}
         </div>
       </div>

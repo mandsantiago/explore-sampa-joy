@@ -1,16 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /404
 
 Sitemap: https://www.viajandoporsp.com.br/sitemap.xml
-
-# Google
-User-agent: Googlebot
-Allow: /
-
-# Bing
-User-agent: Bingbot
-Allow: /
-
-# Crawl delay
-Crawl-delay: 1

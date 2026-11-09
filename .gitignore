@@ -116,3 +116,5 @@ client/src/lib/accommodations.generated.ts
 .env
 .env.local
 
+
+Claude outputs/

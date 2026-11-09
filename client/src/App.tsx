@@ -1,50 +1,48 @@
+import { Route, Router, Switch } from "wouter";
 import { Toaster } from "@/components/ui/sonner";
-  import { TooltipProvider } from "@/components/ui/tooltip";
-  import NotFound from "@/pages/NotFound";
-  import { Route, Switch } from "wouter";
-  import ErrorBoundary from "./components/ErrorBoundary";
-  import { ThemeProvider } from "./contexts/ThemeContext";
-  import Home from "./pages/Home";
-import DestinationDetail from "./pages/DestinationDetail";
-import { SEO } from "./components/SEO";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import ErrorBoundary from "./components/ErrorBoundary";
+import { ThemeProvider } from "./contexts/ThemeContext";
+import { HeadManager } from "./components/HeadManager";
 import { ScrollToTopButton } from "./components/ScrollToTopButton";
 import { ScrollToTop } from "./components/ScrollToTop";
+import Home from "./pages/Home";
+import DestinationDetail from "./pages/DestinationDetail";
+import Category from "./pages/Category";
+import About from "./pages/About";
+import NotFound from "./pages/NotFound";
 
-
-function Router() {
+function Routes() {
   return (
-    <>
-      <ScrollToTop />
-      <Switch>
-        <Route path={"/"} component={Home} />
-        <Route path={"/destino/:id"} component={DestinationDetail} />
-        <Route path={"/404"} component={NotFound} />
-        {/* Final fallback route */}
-        <Route component={NotFound} />
-      </Switch>
-    </>
+    <Switch>
+      <Route path="/" component={Home} />
+      <Route path="/destino/:id" component={DestinationDetail} />
+      <Route path="/categoria/:slug" component={Category} />
+      <Route path="/sobre" component={About} />
+      <Route component={NotFound} />
+    </Switch>
   );
 }
 
-// NOTE: About Theme
-// - First choose a default theme according to your design style (dark or light bg), than change color palette in index.css
-//   to keep consistent foreground/background color across components
-// - If you want to make theme switchable, pass `switchable` ThemeProvider and use `useTheme` hook
+interface AppProps {
+  /** Caminho da página quando renderizada no build (pré-renderização). */
+  ssrPath?: string;
+}
 
-function App() {
+function App({ ssrPath }: AppProps) {
   return (
     <ErrorBoundary>
-      <SEO />
-      <ThemeProvider
-        defaultTheme="light"
-        // switchable
-      >
-        <TooltipProvider>
-          <Toaster />
-          <Router />
-          <ScrollToTopButton />
-        </TooltipProvider>
-      </ThemeProvider>
+      <Router ssrPath={ssrPath}>
+        <HeadManager />
+        <ScrollToTop />
+        <ThemeProvider defaultTheme="light">
+          <TooltipProvider>
+            <Toaster />
+            <Routes />
+            <ScrollToTopButton />
+          </TooltipProvider>
+        </ThemeProvider>
+      </Router>
     </ErrorBoundary>
   );
 }
